@@ -1,9 +1,4 @@
-const testComponent = () => {
-    const element = document.createElement('div');
+import createHeader from "./pages/header"
+import "./styles/main.scss";
 
-    element.innerHTML = "hello world!";
-
-    return element;
-  }
-
-  document.body.appendChild(testComponent());   
+document.body.appendChild(createHeader());
