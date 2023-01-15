@@ -1,0 +1,39 @@
+.content__heading {
+  font-family: $heading-font;
+  font-size: 4rem;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.homepage-content-container {
+  display: flex;
+  gap: 25px;
+  padding: 20px;
+
+ 
+
+  img {
+    border: solid rgb(136, 125, 125) 2px;
+  }
+
+  .homepage-text-container {
+    p {
+      margin: 0;
+      line-height: 25px;
+    }
+
+    &__cta {
+      padding-top: 30px;
+      font-size: 1.3rem;
+      
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .homepage-content-container {
+    flex-direction: column;
+  }
+
+}

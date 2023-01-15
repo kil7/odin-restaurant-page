@@ -1,16 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
-$font-stack: 'Open Sans', sans-serif;
+$font-stack: "Open Sans", sans-serif;
+$heading-font: 'Dancing Script', cursive;
 $colour-darkest: #594545;
-$colour-dark: #815B5B;
-$colour-mid: #9E7676;
-$colour-light: #FFF8EA;
-$colour-font: #3b2e2e;
+$colour-dark: #815b5b;
+$colour-mid: #9e7676;
+$colour-light: #fff8ea;
+$colour-font: #4b3b3b;
 
 body {
   font-family: $font-stack;
   margin: 0;
   background-color: $colour-light;
   color: $colour-font;
+}
+
+.content-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  .content {
+    margin: auto;
+    background-color: whitesmoke;
+    border: solid rgb(226, 225, 225);
+    width: min(calc(100% - 50px), 1000px);
+    padding: 25px;
+  }
 }

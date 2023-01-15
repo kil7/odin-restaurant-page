@@ -1,8 +1,11 @@
 import headerFlagImage from "../assets/flag-innit.png";
 
-const createHeader = () => {
+export const createHeader = () => {
   const header = document.createElement("div");
-  header.className = "header";
+  header.classList.add("header");
+
+  const headerContainer = document.createElement("div");
+  headerContainer.classList.add("header-container");
 
   const brandContainer = document.createElement("div");
   brandContainer.classList.add("brand-container");
@@ -15,17 +18,21 @@ const createHeader = () => {
   brandingTitle.innerHTML = "Lovely Jubbly Innit";
   brandingTitle.classList.add("brand-container__brand-title");
   brandContainer.appendChild(brandingTitle);
-  header.appendChild(brandContainer);
 
-  const headerLinks = ["Home", "Menu", "About"];
+  const headerLinks = ["home", "menu", "about"];
   const headerUL = document.createElement("ul");
   headerUL.classList.add("menu-list");
   headerLinks.forEach((link) => {
     const linkElement = document.createElement("li");
-    linkElement.innerHTML = link;
+    linkElement.classList.add("menu-list__link");
+    linkElement.setAttribute("id", `${link}-link`);
+    linkElement.innerHTML = link.toUpperCase();
     headerUL.appendChild(linkElement);
   });
-  header.appendChild(headerUL);
+
+  header.appendChild(headerContainer);
+  headerContainer.appendChild(brandContainer);
+  headerContainer.appendChild(headerUL);
 
   return header;
 };
