@@ -25,7 +25,7 @@ export const createHeader = () => {
   headerLinks.forEach((link) => {
     const linkElement = document.createElement("li");
     linkElement.classList.add("menu-list__link");
-    linkElement.setAttribute("id", `${link}-link`);
+    linkElement.dataset.menuLink = link;
     linkElement.innerHTML = link.toUpperCase();
     headerUL.appendChild(linkElement);
   });
