@@ -27,6 +27,12 @@ export const menuPage = () => {
   content.classList.add("content");
   contentContainer.appendChild(content);
 
+  const heading = document.createElement("h1");
+  heading.classList.add("content__heading");
+  heading.textContent = "The Menu...";
+  content.appendChild(heading);
+  content.appendChild(document.createElement("hr"));
+
   const introText = document.createElement("p");
   introText.innerHTML = `
     We have a veritable bounty of delectable english cuisine awaiting your tastebuds,

@@ -19,7 +19,11 @@
     "esModuleInterop": true,
 
     /* Experimental Options */
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+
+    "skipLibCheck": true,
+
+    "types": ["google.maps", "node"]
   },
   "include": ["**/*.ts", "**/*.tsx", "src"],
   "exclude": ["node_modules"]

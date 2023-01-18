@@ -1,0 +1,14 @@
+#map {
+  height: 400px;
+  width: 400px;
+}
+
+.about-content-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+
+  p {
+    width: calc(100% - 400px)
+  }
+}

@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const DotenvWebpackPlugin = require("dotenv-webpack");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 // https://webpack.js.org/configuration/configuration-types/
@@ -66,6 +67,7 @@ module.exports = function (env, argv) {
         //template: "./src/index.html"
         title: "Propa Good Grub"
       }),
+      new DotenvWebpackPlugin()
     ].concat(
       env.production
         ? [
